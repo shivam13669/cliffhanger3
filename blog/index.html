@@ -1497,6 +1497,60 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 //# sourceURL=https://manuadventuresindia.com/wp-includes/js/wp-emoji-loader.min.js
 </script>
 
+	<style>
+		a,
+		button,
+		[role="button"],
+		[onclick],
+		.elementor-item,
+		.elementor-button,
+		.elementor-cta,
+		.rs-layer,
+		.ekit-element-link,
+		.menu-item a,
+		.elementor-nav-menu a,
+		.elementor-sub-item {
+			pointer-events: none !important;
+			cursor: not-allowed !important;
+		}
+	</style>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const disableClickHandler = function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+				return false;
+			};
+
+			const elements = document.querySelectorAll('a, button, [role="button"], [onclick], .elementor-item, .elementor-button, .elementor-cta, .rs-layer, .ekit-element-link, .menu-item a, .elementor-nav-menu a, .elementor-sub-item');
+
+			elements.forEach(element => {
+				element.addEventListener('click', disableClickHandler, true);
+				element.addEventListener('mousedown', disableClickHandler, true);
+				element.addEventListener('touchstart', disableClickHandler, true);
+				element.removeAttribute('href');
+				element.removeAttribute('onclick');
+				element.setAttribute('disabled', 'disabled');
+			});
+
+			document.addEventListener('click', disableClickHandler, true);
+		});
+
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', function() {
+				const elements = document.querySelectorAll('a, button, [role="button"], [onclick], .elementor-item, .elementor-button, .elementor-cta, .rs-layer, .ekit-element-link, .menu-item a, .elementor-nav-menu a, .elementor-sub-item');
+				elements.forEach(element => {
+					element.addEventListener('click', function(e) {
+						e.preventDefault();
+						e.stopPropagation();
+						return false;
+					}, true);
+				});
+			});
+		}
+	</script>
+
 </body>
 </html>
 <!--
