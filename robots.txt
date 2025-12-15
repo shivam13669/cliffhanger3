@@ -1,0 +1,4 @@
+#robost-content
+User-agent: *
+Allow: /
+Sitemap: https://manuadventuresindia.com/sitemap.xml
