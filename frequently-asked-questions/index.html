@@ -1692,6 +1692,31 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 //# sourceURL=https://manuadventuresindia.com/wp-includes/js/wp-emoji-loader.min.js
 </script>
 
+	<style>
+		a:not([href*="india-tours"]),
+		button,
+		[role="button"],
+		[onclick],
+		.elementor-item:not([href*="india-tours"]),
+		.elementor-button,
+		.elementor-cta,
+		.rs-layer,
+		.ekit-element-link,
+		.menu-item a:not([href*="india-tours"]),
+		.elementor-nav-menu a:not([href*="india-tours"]),
+		.elementor-sub-item:not([href*="india-tours"]) {
+			pointer-events: none !important;
+			cursor: not-allowed !important;
+		}
+	</style>
+	<script>
+		document.addEventListener('DOMContentLoaded',function(){
+			const h=e=>(e.preventDefault(),e.stopPropagation(),!1);
+			document.querySelectorAll('a:not([href*="india-tours"]),button,[role="button"],[onclick],.elementor-item:not([href*="india-tours"]),.elementor-button,.elementor-cta,.rs-layer,.ekit-element-link,.menu-item a:not([href*="india-tours"]),.elementor-nav-menu a:not([href*="india-tours"]),.elementor-sub-item:not([href*="india-tours"])').forEach(e=>{e.addEventListener('click',h,!0),e.addEventListener('mousedown',h,!0),e.addEventListener('touchstart',h,!0),e.removeAttribute('onclick'),e.setAttribute('disabled','disabled')});
+			document.addEventListener('click',h,!0);
+		});
+	</script>
+
 </body>
 </html>
 <!--
